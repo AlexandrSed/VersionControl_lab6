@@ -6,7 +6,7 @@ import random
 
 pygame.init()
 
-white = (255, 255, 255)
+white = (255, 255, 255) # third commit in firstBranch берем из feature
 yellow = (255, 255, 102)
 black = (0, 0, 0)
 red = (255, 0, 0)
@@ -28,7 +28,7 @@ scoreFont = pygame.font.SysFont("comicsansms", 25)
 
 def ourSnake(snakeBlock, snakeList):
     for x in snakeList:
-        pygame.draw.rect(dis, black, [x[0], x[1], snakeBlock, snakeBlock])
+        pygame.draw.rect(dis, white, [x[0], x[1], snakeBlock, snakeBlock]) # third commit in firstBranch берем из master
 
 def message(msg,color):
    mesg = fontStyle.render(msg, True, color)
@@ -41,7 +41,7 @@ def YourScore(score):
 def gameLoop():
     gameOver = False
     gameClose = False
-    x1 = disWidth / 2
+    x1 = disWidth / 2 # third commit in firstBranch берем из обеих веток
     y1 = disHeight / 2
     x1_change = 0
     y1_change = 0
@@ -55,7 +55,7 @@ def gameLoop():
     while not gameOver:
         while gameClose == True:
             dis.fill(blue)
-            message("Вы проиграли! Нажмите Q для выхода или C для повторной игры ", red)
+            message("Поражение! Нажмите Q для выхода или C для повторной игры ", red)
             pygame.display.update()
             for event in pygame.event.get():
                 if event.type == pygame.KEYDOWN:
