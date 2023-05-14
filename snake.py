@@ -89,7 +89,7 @@ def gameLoop():
         if typeFood == 0:
             pygame.draw.rect(dis, red, [foodx, foody, snakeBlock, snakeBlock]) # first commit in thirdBranch
         else:
-            pygame.draw.rect(dis, red, [foodx, foody, snakeBlock, snakeBlock])
+            pygame.draw.rect(dis, green, [foodx, foody, snakeBlock, snakeBlock]) # second commit in thirdBranch
 
         snakeHead = []
         snakeHead.append(x1)
