@@ -55,7 +55,7 @@ def gameLoop():
     while not gameOver:
         while gameClose == True:
             dis.fill(blue)
-            message("Поражение! Нажмите Q для выхода или C для повторной игры ", red)
+            message("Поражение! Нажмите Q для выхода или C для повторной игры ", red) # fourth commit in firstBranch
             pygame.display.update()
             for event in pygame.event.get():
                 if event.type == pygame.KEYDOWN:
