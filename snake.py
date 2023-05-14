@@ -121,7 +121,7 @@ def gameLoop():
             else:
                 typeFood = 1
 
-        clock.tick(snakeSpeed)
+        clock.tick(snakeSpeed) # third commit in main
 
     pygame.quit()
     quit()
