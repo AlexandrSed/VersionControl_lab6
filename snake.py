@@ -124,6 +124,6 @@ def gameLoop():
         clock.tick(snakeSpeed) # third commit in main
 
     pygame.quit()
-    quit()
+    quit() # fourth commit in main
 
 gameLoop()
