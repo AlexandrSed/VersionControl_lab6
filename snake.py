@@ -32,7 +32,7 @@ def ourSnake(snakeBlock, snakeList):
 
 def message(msg,color):
    mesg = fontStyle.render(msg, True, color)
-   dis.blit(mesg, [disWidth/5, disHeight/3]) 
+   dis.blit(mesg, [disWidth/5, disHeight/3]) # fourth commit in secondBranch
 
 def YourScore(score):
     value = scoreFont.render("Ваш счёт: " + str(score), True, yellow)
