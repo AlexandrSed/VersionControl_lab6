@@ -17,7 +17,7 @@ disWidth = 800
 disHeight = 400 # first commit in secondBranch
 dis = pygame.display.set_mode((disWidth, disHeight))
 
-pygame.display.set_caption("Змейка")
+pygame.display.set_caption("Snake") # second commit in secondBranch
 clock = pygame.time.Clock()
 
 snakeBlock = 10
