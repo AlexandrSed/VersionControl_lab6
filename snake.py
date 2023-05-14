@@ -24,7 +24,7 @@ snakeBlock = 10
 snakeSpeed = 15
 fontStyle = pygame.font.SysFont("bahnschrift", 25)
 
-scoreFont = pygame.font.SysFont("comicsansms", 25)
+scoreFont = pygame.font.SysFont("comicsansms", 24) # third commit in secondBranch берем из master
 
 def ourSnake(snakeBlock, snakeList):
     for x in snakeList:
@@ -32,7 +32,7 @@ def ourSnake(snakeBlock, snakeList):
 
 def message(msg,color):
    mesg = fontStyle.render(msg, True, color)
-   dis.blit(mesg, [disWidth/6, disHeight/3])
+   dis.blit(mesg, [disWidth/5, disHeight/3]) 
 
 def YourScore(score):
     value = scoreFont.render("Ваш счёт: " + str(score), True, yellow)
@@ -62,14 +62,14 @@ def gameLoop():
                     if event.key == pygame.K_q:
                         gameOver = True
                         gameClose = False
-                    if event.key == pygame.K_c:
+                    if event.key == pygame.K_c: # third commit in secondBranch берем из feature
                         gameLoop()
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 gameOver = True
             if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_LEFT:
+                if event.key == pygame.K_LEFT: # third commit in secondBranch берем из обеих веток
                     x1_change = -snakeBlock
                     y1_change = 0
                 elif event.key == pygame.K_RIGHT:
