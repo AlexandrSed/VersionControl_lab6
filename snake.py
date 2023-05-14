@@ -35,7 +35,7 @@ def message(msg,color):
    dis.blit(mesg, [disWidth/6, disHeight/3])
 
 def YourScore(score):
-    value = scoreFont.render("Ваш счёт: " + str(score), True, yellow)
+    value = scoreFont.render("Ваш счёт: " + str(score), True, black) # second commit in firstBranch
     dis.blit(value, [0, 0])
 
 def gameLoop():
