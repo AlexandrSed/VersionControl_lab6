@@ -6,7 +6,7 @@ import random
 
 pygame.init()
 
-white = (255, 255, 255)
+white = (255, 255, 255) # conflict with first branch
 yellow = (255, 255, 102)
 black = (0, 0, 0)
 red = (255, 0, 0)
@@ -24,11 +24,11 @@ snakeBlock = 10
 snakeSpeed = 15
 fontStyle = pygame.font.SysFont("bahnschrift", 25)
 
-scoreFont = pygame.font.SysFont("comicsansms", 25)
+scoreFont = pygame.font.SysFont("comicsansms", 25) # conflict with second branch
 
 def ourSnake(snakeBlock, snakeList):
     for x in snakeList:
-        pygame.draw.rect(dis, black, [x[0], x[1], snakeBlock, snakeBlock])
+        pygame.draw.rect(dis, black, [x[0], x[1], snakeBlock, snakeBlock]) # conflict with first branch
 
 def message(msg,color):
    mesg = fontStyle.render(msg, True, color)
@@ -41,7 +41,7 @@ def YourScore(score):
 def gameLoop():
     gameOver = False
     gameClose = False
-    x1 = disWidth / 2
+    x1 = disWidth / 2 # conflict with first branch
     y1 = disHeight / 2
     x1_change = 0
     y1_change = 0
@@ -62,14 +62,14 @@ def gameLoop():
                     if event.key == pygame.K_q:
                         gameOver = True
                         gameClose = False
-                    if event.key == pygame.K_c:
+                    if event.key == pygame.K_c: # conflict with second branch
                         gameLoop()
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 gameOver = True
             if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_LEFT:
+                if event.key == pygame.K_LEFT: # conflict with second branch
                     x1_change = -snakeBlock
                     y1_change = 0
                 elif event.key == pygame.K_RIGHT:
@@ -94,14 +94,14 @@ def gameLoop():
         snakeHead = []
         snakeHead.append(x1)
         snakeHead.append(y1)
-        snakeList.append(snakeHead)
+        snakeList.append(snakeHead) # conflict with third branch
 
         if len(snakeList) > LengthOfSnake:
             del snakeList[0]
 
         for x in snakeList[:-1]:
             if x == snakeHead:
-                gameClose = True
+                gameClose = True # conflict with third branch
 
         ourSnake(snakeBlock, snakeList)
         YourScore(LengthOfSnake - 1)
@@ -109,7 +109,7 @@ def gameLoop():
 
         if x1 == foodx and y1 == foody:
 
-            foodx = round(random.randrange(0, disWidth - snakeBlock) / 10.0) * 10.0
+            foodx = round(random.randrange(0, disWidth - snakeBlock) / 10.0) * 10.0 # conflict with third branch
             foody = round(random.randrange(0, disHeight - snakeBlock) / 10.0) * 10.0
 
             if typeFood == 0:
