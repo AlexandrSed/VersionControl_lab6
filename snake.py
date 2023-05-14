@@ -21,7 +21,7 @@ pygame.display.set_caption("Змейка")
 clock = pygame.time.Clock()
 
 snakeBlock = 10
-snakeSpeed = 15
+snakeSpeed = 10 # first commit in firstBranch
 fontStyle = pygame.font.SysFont("bahnschrift", 25)
 
 scoreFont = pygame.font.SysFont("comicsansms", 25)
