@@ -87,7 +87,7 @@ def gameLoop():
         y1 += y1_change
         dis.fill(blue)
         if typeFood == 0:
-            pygame.draw.rect(dis, green, [foodx, foody, snakeBlock, snakeBlock])
+            pygame.draw.rect(dis, red, [foodx, foody, snakeBlock, snakeBlock]) # first commit in thirdBranch
         else:
             pygame.draw.rect(dis, red, [foodx, foody, snakeBlock, snakeBlock])
 
