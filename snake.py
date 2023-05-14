@@ -76,7 +76,7 @@ def gameLoop():
                     x1_change = snakeBlock
                     y1_change = 0
                 elif event.key == pygame.K_UP:
-                    y1_change = -snakeBlock
+                    y1_change = -snakeBlock # sixth commit in third branch
                     x1_change = 0
                 elif event.key == pygame.K_DOWN:
                     y1_change = snakeBlock
