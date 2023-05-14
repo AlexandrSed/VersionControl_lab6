@@ -14,7 +14,7 @@ blue = (0, 0, 255)
 green = (0, 255, 0)
 
 disWidth = 800
-disHeight = 600
+disHeight = 400 # first commit in secondBranch
 dis = pygame.display.set_mode((disWidth, disHeight))
 
 pygame.display.set_caption("Змейка")
