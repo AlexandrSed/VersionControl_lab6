@@ -117,7 +117,7 @@ def gameLoop():
             else:
                 LengthOfSnake += 3
             if random.random() > 0.5:
-                typeFood = 0
+                typeFood = 0 # second commit in main
             else:
                 typeFood = 1
 
