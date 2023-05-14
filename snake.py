@@ -113,7 +113,7 @@ def gameLoop():
             foody = round(random.randrange(0, disHeight - snakeBlock) / 10.0) * 10.0
 
             if typeFood == 0:
-                LengthOfSnake += 1
+                LengthOfSnake += 2 # fourth commit in thirdBranch
             else:
                 LengthOfSnake += 3
             if random.random() > 0.5:
