@@ -14,10 +14,10 @@ blue = (0, 0, 255)
 green = (0, 255, 0)
 
 disWidth = 800
-disHeight = 600
+disHeight = 600 # fifth commit in firstBranch берем из first Branch
 dis = pygame.display.set_mode((disWidth, disHeight))
 
-pygame.display.set_caption("Змейка")
+pygame.display.set_caption("Змейка") # fifth commit in firstBranch берем из second Branch
 clock = pygame.time.Clock()
 
 snakeBlock = 10
@@ -32,7 +32,7 @@ def ourSnake(snakeBlock, snakeList):
 
 def message(msg,color):
    mesg = fontStyle.render(msg, True, color)
-   dis.blit(mesg, [disWidth/6, disHeight/3])
+   dis.blit(mesg, [disWidth/6, disHeight/3]) # fifth commit in firstBranch берем из двух веток
 
 def YourScore(score):
     value = scoreFont.render("Ваш счёт: " + str(score), True, black) # second commit in firstBranch
@@ -87,9 +87,9 @@ def gameLoop():
         y1 += y1_change
         dis.fill(blue)
         if typeFood == 0:
-            pygame.draw.rect(dis, green, [foodx, foody, snakeBlock, snakeBlock])
+            pygame.draw.rect(dis, green, [foodx, foody, snakeBlock, snakeBlock]) # fifth commit in firstBranch берем из first branch
         else:
-            pygame.draw.rect(dis, red, [foodx, foody, snakeBlock, snakeBlock])
+            pygame.draw.rect(dis, red, [foodx, foody, snakeBlock, snakeBlock]) # fifth commit in firstBranch берем из second branch
 
         snakeHead = []
         snakeHead.append(x1)
@@ -113,7 +113,7 @@ def gameLoop():
             foody = round(random.randrange(0, disHeight - snakeBlock) / 10.0) * 10.0
 
             if typeFood == 0:
-                LengthOfSnake += 1
+                LengthOfSnake += 1 # fifth commit in firstBranch берем из двух
             else:
                 LengthOfSnake += 3
             if random.random() > 0.5:
