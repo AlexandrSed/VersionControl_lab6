@@ -94,14 +94,14 @@ def gameLoop():
         snakeHead = []
         snakeHead.append(x1)
         snakeHead.append(y1)
-        snakeList.append(snakeHead)
+        snakeList.append(snakeHead) # third commit in thirdBranch берем из master
 
         if len(snakeList) > LengthOfSnake:
             del snakeList[0]
 
         for x in snakeList[:-1]:
             if x == snakeHead:
-                gameClose = True
+                gameClose = True # third commit in thirdBranch берем из feature
 
         ourSnake(snakeBlock, snakeList)
         YourScore(LengthOfSnake - 1)
@@ -109,7 +109,7 @@ def gameLoop():
 
         if x1 == foodx and y1 == foody:
 
-            foodx = round(random.randrange(0, disWidth - snakeBlock) / 10.0) * 10.0
+            foodx = round(random.randrange(0, disWidth - snakeBlock) / 10.0) * 10.0 # third commit in thirdBranch берем из обеих веток
             foody = round(random.randrange(0, disHeight - snakeBlock) / 10.0) * 10.0
 
             if typeFood == 0:
